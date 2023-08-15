@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/images/half-moon.png">
+    <title>Clothing | Luna</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles/final.css">
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+</head>
+
+<body style="background-color: rgb(250, 243, 221)">
+    <div id="navbar"></div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="product-image" src="" alt="Product Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h4 style="color: #987554;" id="product-title"></h4>
+                <div style="color: #987554;" id="product-price"></div>
+                <div style="color: #987554;" id="product-color"></div>
+                <br>
+                <label style="color: #987554;" for="size">Select Size:</label>
+                <select class="form-select form-select-lg mb-3" id="size" style="width: 100%;">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="X-Large">X-Large</option>
+                </select>
+                <br>
+                <button class="addToBag btn btn-dark" style="width: 100%;" data-toggle="modal" data-target="#exampleModal">
+                    <i class="bi bi-bag"></i> Add to Bag
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Added to Bag</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Thank you, you can view this product in your shopping bag
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <br><br>
+                <div class="alert alert-success">
+                    <i class="bi bi-exclamation-circle-fill"></i> Members get free online returns.
+                </div>
+                <a href="#" style="color: #987554;" id="show-delivery-payment">Delivery and Payment</a>
+                <div id="delivery-payment-sidebar" class="deliverysidebar">
+                    <button id="close-sidebar" class="btn btn-dark">&times;</button>
+                    <h4>Delivery and Payment</h4>
+                    <br>
+                    <p>SHIPPING: Shipping is available to customers at least 13 years of age with a valid US shipping
+                        and billing address.</p>
+                    <p>RETURNS: Easy online returns within 30 days (return fee $5.99). Free return or exchange in-store.
+                    </p>
+                    <p>PAYMENT: We accept card payments via Visa, Apple Pay, MasterCard, Discover, and American Express.
+                        You can also pay with Klarna's flexible payment options, Paypal, and Luna Gift Cards. <a
+                            href="#">Learn more with our customer service pages</a>.</p>
+                </div>
+                <br>
+                <br>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Supplier Information
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Independent suppliers make all our products in many parts of the world. Suppliers and
+                                    factories who work with us must sign our Sustainability Commitment, and we employ
+                                    staff in
+                                    our worldwide production offices to ensure the commitment is followed. If you want
+                                    to learn more about our Sustainability Commitment, and our work with suppliers
+                                    and factories in general, visit "Standards and Policies" at Luna.com.</p>
+                                <p>As for now, we can share this information for Luna products.</p>
+                                <p>Spain, Turkey <br> Pietra Garment Company LTD <br>C. Almendros, 22, 45700 Consuegra,
+                                    Toledo, Spain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Care Guide
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>You too can help the environment and make fashion more sustainable.
+                                    Bring unwanted clothes or home textiles to any Luna store and they will be reworn,
+                                    reused or recycled.</p>
+                                <ul>Care Instructions
+                                    <li>Only non-chlorine bleach when needed</li>
+                                    <li>No dry clean</li>
+                                    <li>Medium iron</li>
+                                    <li>Machine wash cool</li>
+                                    <li>Wash with like colors</li>
+                                    <li>Line dry</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div id="footer"></div>
+
+        <script>
+            $(document).ready(function () {
+                $("#navbar").load("navbar.html");
+                $("#footer").load("footer.html");
+            });
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var image = urlParams.get('image');
+            var title = urlParams.get('title');
+            var price = urlParams.get('price');
+            var color = urlParams.get('color');
+
+            if (color) {
+                var colorDiv = document.getElementById('product-color');
+
+                var colorNameParagraph = document.createElement('p');
+                colorNameParagraph.innerText = color;
+                colorDiv.appendChild(colorNameParagraph);
+
+                var colorCircle = document.createElement('span');
+                colorCircle.style.backgroundColor = color;
+                colorCircle.style.width = '20px';
+                colorCircle.style.height = '20px';
+                colorCircle.style.display = 'inline-block';
+                colorCircle.style.borderRadius = '50%';
+
+                colorDiv.appendChild(colorCircle);
+            }
+
+            document.getElementById('product-image').src = decodeURIComponent(image);
+            document.getElementById('product-title').innerText = decodeURIComponent(title).replace(/_/g, ' ');
+            document.getElementById('product-price').innerText = decodeURIComponent(price);
+
+            document.getElementById("show-delivery-payment").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.getElementById("delivery-payment-sidebar").style.right = "0";
+            });
+
+            document.getElementById("close-sidebar").addEventListener("click", function () {
+                document.getElementById("delivery-payment-sidebar").style.right = "-380px";
+            });
+
+            $(".addToBag").click(function () {
+                const productDetails = {
+                    image: decodeURIComponent(image),
+                    price: decodeURIComponent(price),
+                    size: $("#size").val()
+                };
+                $.post("/add-to-bag", productDetails, function (data) {
+                    console.log("Product added to bag!");
+                });
+            });
+        </script>
+</body>
+
+</html>

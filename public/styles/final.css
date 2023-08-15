@@ -1,0 +1,283 @@
+body {
+    background-color: rgb(250, 243, 221);
+}
+
+.navbar {
+    background-color: rgb(250, 243, 221);
+}
+
+.nav-link {
+    color: #987554;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #987554;
+    font-family: "Noto";
+    font-size: 30px;
+}
+
+.first-text-box {
+    background-color: #eed9c4;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.second-text-box {
+    background-color: #eed9c4;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 372px;
+}
+
+.third-text-box {
+    background-color: #eed9c4;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 555px;
+}
+
+.heading {
+    color: #987554;
+    font-family: "Noto";
+    font-size: 50px;
+    align-items: start;
+    text-shadow: 1px 1px 3px #987554;
+}
+
+.sub2Heading {
+    color: #987554;
+    font-family: 'Alex Brush';
+    font-size: 50px;
+}
+
+.sub3Heading {
+    color: #987554;
+    font-family: 'Alex Brush';
+    font-size: 60px;
+}
+
+.subHeading {
+    color: #987554;
+    font-family: 'Alex Brush';
+    font-size: 100px;
+}
+
+p a {
+    color: #987554;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgb(250, 243, 221);
+    padding: 20px 40px;
+}
+
+footer h5 {
+    color: #987554;
+    font-size: 25px;
+    font-family: "Noto";
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    color: #987554;
+    font-size: 16px;
+    font-family: "Noto";
+}
+
+footer form input[type="email"] {
+    width: 67%;
+    padding: 10px;
+    border: 1px solid #eed9c4;
+    margin-right: 10px;
+    font-family: "Noto";
+}
+
+.subscribe {
+    color: #987554;
+    font-size: 16px;
+    font-family: "Noto";
+}
+
+.copyright {
+    color: #987554;
+    font-size: 16px;
+    font-family: "Noto";
+}
+
+footer form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eed9c4;
+    color: #987554;
+    font-family: "Noto";
+}
+
+.btn-outline-success {
+    border: none;
+    color: #987554;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-body {
+    background-color: rgb(250, 243, 221);
+    padding: 15px;
+}
+
+.card {
+    display: inline-block;
+    border: 1px solid rgb(250, 243, 221);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title,
+.price,
+.size {
+    color: #987554;
+}
+
+.card-img-top {
+    width: 260px;
+    height: 388.5px;
+}
+
+.custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(250, 243, 221);
+}
+
+.custom a {
+    color: #987554;
+}
+
+.nav-item a:hover {
+    color: #987554;
+    text-decoration: underline;
+}
+
+.deliverysidebar {
+    height: 100%;
+    width: 380px;
+    /* Set a fixed width for the sidebar */
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    right: -380px;
+    /* Hide the sidebar by shifting it off the screen */
+    background-color: #eed9c4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.deliverysidebar p,
+.deliverysidebar a {
+    color: #987554;
+    font-family: "Noto";
+}
+
+.deliverysidebar h4 {
+    align-items: center;
+    color: #000000;
+}
+
+#close-sidebar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #987554;
+    /* Text color, you can change it */
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    margin-right: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #eed9c4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #987554; 
+}
+
+.close {
+    color: #987554;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#accordion .card {
+    border: none; /* Remove the border */
+    background: none; /* Remove the background color */
+    box-shadow: none; /* Remove the shadow */
+}
+
+#accordion .card-header {
+    color: #987554;
+    padding: 0; /* Remove padding from the header */
+    background: none; /* Remove background color from the header */
+}
+
+#accordion .btn-link {
+    color: inherit; /* Inherit the color from the parent to avoid blue link color */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#accordion .card-body {
+    padding: 0; /* Adjust padding inside the card body as per your needs */
+}

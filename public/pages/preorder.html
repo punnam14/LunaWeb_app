@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "icon" href="/images/half-moon.png">
+    <title>Clothing | Luna</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles/final.css">
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+</head>
+
+<body style="background-color: rgb(250, 243, 221)">
+    <div id="navbar"></div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="product-image" src="" alt="Product Image" class="img-fluid">
+                <h4 id="product-title"></h4>
+                <div id="product-price"></div>
+                <div id="product-color"></div>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" min="1" placeholder="Enter quantity">
+                    </div>
+                      <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Enter company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea class="form-control" id="additionalInfo" name="additionalInfo" rows="3" placeholder="Enter additional information"></textarea>
+                    </div>
+                        <a href="checkout.html" class="btn btn-dark">Submit Preorder</a> <!-- Checkout button -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div id="footer"></div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $("#navbar").load("navbar.html");
+        $("#footer").load("footer.html");
+    });
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var image = urlParams.get('image');
+    var price = urlParams.get('price');
+    var color = urlParams.get('color');
+
+    document.getElementById('product-image').src = decodeURIComponent(image);
+    document.getElementById('product-title').innerText = decodeURIComponent(image).split('/').pop().split('.')[0];
+    document.getElementById('product-price').innerText = decodeURIComponent(price);
+    document.getElementById('product-color').innerText = decodeURIComponent(color);
+</script>
