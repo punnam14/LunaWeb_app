@@ -1,35 +1,58 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <img src="/images/half-moon.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-            Luna
-        </a>
-        <div class="collapse navbar-collapse justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/clothing">Clothing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/candles">Candles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/ceramics">Ceramics</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/login"><i class="bi bi-person"></i> Sign in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/favorites"><i class="bi bi-heart"></i> Favorites</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/shoppingbag"><i class="bi bi-bag"></i> Shopping Bag</a>
-                </li>
-            </ul>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/half-moon.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                Luna
+            </a>
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/clothing">Clothing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/candles">Candles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ceramics">Ceramics</a>
+                    </li>
+                </ul>
+                <span id="welcome-message" class="navbar-text" style="color: #987554; margin-left: 200px;"></span>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/favorites"><i class="bi bi-heart"></i> Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shoppingbag"><i class="bi bi-bag"></i> Shopping Bag</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-gear"></i> Settings
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="settingsDropdown">
+                            <a class="dropdown-item" href="/login"><i class="bi bi-person"></i> Sign in</a>
+                            <a class="dropdown-item" href="/logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <script>
+        $(document).ready(function () {
+          $.get('/userstatus', function (data) {
+            if (data.loggedin) {
+              var welcomeMessage = 'Welcome back, ' + data.username + '!';
+              $('#welcome-message').text(welcomeMessage);
+            }
+          });
+        });
+      </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>

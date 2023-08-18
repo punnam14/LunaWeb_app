@@ -43,3 +43,9 @@ go to the project folder and run
 node server.js 
 go to the localhost mentioned and the project should run, navigate the links here for exploring features and pages 
 
+GoogleOAuth2 
+
+clientID - 796864924351-0sskk4r87tmpmvu5g3huvqrupr4tflu2.apps.googleusercontent.com
+
+client secret - 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
+
